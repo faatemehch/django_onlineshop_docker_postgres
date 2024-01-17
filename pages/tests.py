@@ -11,6 +11,10 @@ class HomeAndAboutTest(TestCase):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
 
+    def test_home_page_template(self):
+        response = self.client.get(reverse('home'))
+        self.assertTemplateUsed(response, 'home.html')
+
     def test_about_url(self):
         response = self.client.get('/aboutus/')
         self.assertEqual(response.status_code, 200)
@@ -18,3 +22,7 @@ class HomeAndAboutTest(TestCase):
     def test_about_url_by_name(self):
         response = self.client.get(reverse('aboutus'))
         self.assertEqual(response.status_code, 200)
+
+    def test_aboutus_page_template(self):
+        response = self.client.get(reverse('aboutus'))
+        self.assertTemplateUsed(response, 'pages/aboutus.html')
