@@ -5,9 +5,12 @@ Login
 {% endblock %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" value="Login">
-</form>
+<div class="container">
+    <h2 class="m-3">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Login">
+    </form>
+</div>
 {% endblock %}
