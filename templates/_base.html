@@ -7,6 +7,51 @@
           crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-light" href="#">OnlineShop</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link{% if request.resolver_match.url_name == 'home' %} text-info {% else %} text-light {% endif %}" aria-current="page" href="{% url "home" %}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'aboutus' %} text-info {% else %} text-light {% endif %}" href="{% url "aboutus" %}">About us</a>
+                      </li>
+                      {% if not request.user.is_authenticated %}
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'account_login' %} text-info {% else %} text-light {% endif %}" href="{% url 'account_login' %}">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'account_signup' %} text-info {% else %} text-light {% endif %}" href="{% url 'account_signup' %}">Sign up</a>
+                      </li>
+                      {% else %}
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'account_logout' %} text-info {% else %} text-light {% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                      </li>
+                      {% endif %}
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Account
+                        </a>
+                        <ul class="dropdown-menu">
+                                {% if not request.user.is_authenticated %}
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign up</a></li>
+                                {% else %}
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a></li>
+                                {% endif %}
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              
+            
 {% block content %}
 {% endblock %}
 <!-- Optional JavaScript; choose one of the two! -->
