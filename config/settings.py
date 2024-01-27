@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'allauth',
     'allauth.account',
+    'rosetta',
     # local apps
     'accounts',
     'pages',
@@ -130,11 +131,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = 'Asia/Tehran'
+LANGUAGES = (
+    ('en', 'English'), 
+    ('fa', 'Persian'),
+)
 USE_I18N = True
+
+USE_l10n = True
 
 USE_TZ = True
 
