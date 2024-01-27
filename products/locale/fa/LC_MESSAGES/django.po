@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-27 11:06+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: models.py:7
+#, fuzzy
+#| msgid "product"
+msgid "product title"
+msgstr "محصول"
+
+#: models.py:8 templates/products/product_detail.html:73
+msgid "description"
+msgstr "توضیحات"
+
+#: models.py:9 models.py:40
+msgid "created date"
+msgstr "تاریخ ایجاد"
+
+#: models.py:10
+#, fuzzy
+#| msgid "modified date"
+msgid "last modified date"
+msgstr "تاریخ آخرین تغییر"
+
+#: models.py:11
+msgid "price"
+msgstr "قیمت"
+
+#: models.py:12
+msgid "Active\\Inactive"
+msgstr "فعال/غیرفعال"
+
+#: models.py:29
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: models.py:30
+msgid "Bad"
+msgstr "بد"
+
+#: models.py:31
+msgid "Normal"
+msgstr "نرمال"
+
+#: models.py:32
+msgid "Good"
+msgstr "خوب"
+
+#: models.py:33
+msgid "Perfect"
+msgstr "عالی"
+
+#: models.py:36
+msgid "product"
+msgstr "محصول"
+
+#: models.py:38
+msgid "author text"
+msgstr "نویسنده متن"
+
+#: models.py:39
+msgid "message text"
+msgstr "متن پیام"
+
+#: models.py:41
+msgid "modified date"
+msgstr "تاریخ آخرین تغییر"
+
+#: models.py:42
+msgid "Points"
+msgstr "امتیاز"
+
+#: models.py:43
+msgid "Active \\ Inactive"
+msgstr "فعال/غیرفعال"
+
+#: templates/products/product_detail.html:67
+msgid "product description"
+msgstr "توضیحات محصول"
+
+#: templates/products/product_detail.html:70
+msgid "categories"
+msgstr "دسته بندی‌ها"
+
+#: templates/products/product_detail.html:88
+msgid "weight"
+msgstr "وزن"
+
+#: templates/products/product_detail.html:92
+msgid "size"
+msgstr "سایز"
+
+#: templates/products/product_detail.html:96
+msgid "color"
+msgstr "رنگ"
+
+#: templates/products/product_detail.html:149
+msgid "Write your comment"
+msgstr "نظر خود را بنویسید"
+
+#: templates/products/product_detail.html:173
+msgid "submit"
+msgstr "ارسال"

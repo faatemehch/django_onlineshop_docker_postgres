@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags%}
 {% load comment_tags %}
 {% block title %}{{ product.title }}{% endblock title %}
@@ -63,13 +64,13 @@
                             <div class="product-data-tab tab-style-3">
                                 <div class="nav nav-tabs product-data-tab__head" id="product-tab" role="tablist">
                                     <a class="m-0 product-data-tab__link nav-link active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-selected="true">
-                                        <span>توضیحات محصول</span>
+                                        <span>{% trans "product description" %} </span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-selected="true">
-                                        <span>ویژگی ها</span>
+                                        <span> {% trans "categories" %}</span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
-                                        <span>نظرات ({{product.comments|only_active_comments|length}})</span>
+                                        <span>{% trans "description" %} ({{product.comments|only_active_comments|length}})</span>
                                     </a>
                                 </div>
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
@@ -84,15 +85,15 @@
                                             <table class="table shop_attributes">
                                                 <tbody>
                                                     <tr>
-                                                        <th>وزن</th>
+                                                        <th>{% trans "weight" %}</th>
                                                         <td>۴۳۰ گرم</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>سایز</th>
+                                                        <th>{% trans "size" %}</th>
                                                         <td>XL</td>
                                                     </tr>
                                                     <tr>
-                                                        <th>رنگ</th>
+                                                        <th>{% trans "color" %}</th>
                                                         <td>
                                                             <a href="shop-sidebar.html">مشکی</a>,
                                                             <a href="shop-sidebar.html">سبز</a>,
@@ -145,7 +146,7 @@
                                                 <div class="row">
                                                     <div class="border-top py-5 w-100"></div>
                                                     <div class="col-lg-8 m-auto">
-                                                        <span class="reply-title pull-right">نظر خود را بنویسید</span>
+                                                        <span class="reply-title pull-right">{% trans "Write your comment" %}</span>
                                                         <br>
                                                         <form method="POST" class="form text-right" action="{% url "comment_create" product.id %}">
                                                             {% csrf_token %}
@@ -168,7 +169,7 @@
                                                             <div class="form__group">
                                                                 <div class="form-row">
                                                                     <div class="col-12">
-                                                                        <input type="submit" value="ارسال" class="btn-submit">
+                                                                        <input type="submit" value="{% trans "submit" %}" class="btn-submit">
                                                                     </div>
                                                                 </div>
                                                             </div>
