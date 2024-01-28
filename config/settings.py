@@ -173,3 +173,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # crispy package
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+from django.contrib.messages import constants
+# messages framework
+MESSAGE_TAGS = {
+    constants.ERROR: 'danger',
+}
