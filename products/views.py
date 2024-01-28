@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .models import Product, Comment
 from .forms import CommentForm
