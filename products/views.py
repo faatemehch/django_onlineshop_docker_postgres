@@ -4,7 +4,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from .models import Product, Comment
 from .forms import CommentForm
-
+from cart.forms import AddToCartForm
 # from django.utils.translation import gettext as _
 
 
@@ -20,6 +20,7 @@ class ProductDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["form"] = CommentForm()
+        context["add_to_cart_form"] = AddToCartForm()
         return context
     
 
