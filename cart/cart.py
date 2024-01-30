@@ -18,7 +18,7 @@ class Cart:
         Add the specified product to cart if is not exists else add the quantity
         """
         product_id = str(product.id)
-        if product_id not in self.cart:
+        if product_id not in self.cart.keys():
             self.cart[product_id] = {
                 'quantity': quantity
             }

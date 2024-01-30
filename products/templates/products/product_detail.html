@@ -41,13 +41,11 @@
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url "cart:add_to_cart" product.id %}" method="POST">
                                         {% csrf_token %}
-                                        {% comment %} <div class="quantity">
-                                            <div class="quantity-wrapper d-flex justify-content-start"> {% endcomment %}
-                                            {{add_to_cart_form|crispy}}
-                             
-                                            {% comment %} </div> 
-                                        </div>  {% endcomment %}
-                                            <button type="submit" class="btn btn-small btn-bg-red btn-color-white btn-hover-2" onclick="window.location.href='cart.html'">
+                                        <div class="quantity">
+                                            {% comment %} {{add_to_cart_form|crispy}} {% endcomment %}
+                                            <input type="number" class="quantity-input" name="quantity" id="qty" value="1" min="1" max="20">
+                                        </div>
+                                        <button type="submit" class="btn btn-small btn-bg-red btn-color-white btn-hover-2" onclick="window.location.href='cart.html'">
                                             اضافه به سبد خرید
                                         </button>
                                     </form>
