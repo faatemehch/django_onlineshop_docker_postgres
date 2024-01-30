@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% block title %}
 shopping cart
 {% endblock title %}
@@ -23,7 +24,7 @@ shopping cart
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mb-md--50">
-                            <form class="cart-form" action="#">
+                    
                                 <div class="row no-gutters">
                                     <div class="col-12">
                                         <div class="table-content table-responsive">
@@ -31,23 +32,23 @@ shopping cart
                                                 <thead>
                                                     <tr>
                                                         <th>&nbsp;</th>
-                                                        <th>عکس محصول</th>
-                                                        <th class="text-left">نام محصول</th>
-                                                        <th>قیمت</th>
-                                                        <th>مقدار</th>
-                                                        <th>مجموع</th>
+                                                        <th>{% trans "Product Image" %} </th>
+                                                        <th>{% trans "Product Title" %} </th>
+                                                        <th>{% trans "Price" %}</th>
+                                                        <th>{% trans "Quantity" %}</th>
+                                                        <th>{% trans "Total" %}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     {% for item in cart %}
                                                     <tr>
-                                                        <td class="product-remove text-left"><a href=""><i class="flaticon flaticon-cross"></i></a></td>
+                                                        <td class="product-remove text-left"><a href="{% url "cart:remove_from_cart"  item.product_obj.id %}"><i class="flaticon flaticon-cross"></i></a></td>
                                                         <td class="product-thumbnail text-left">
                                                             <img src="assets/img/products/prod-10-70x88.jpg" alt="Product Thumnail">
                                                         </td>
                                                         <td class="product-name wide-column">
                                                             <h3>
-                                                                <a href="product-details.html">{{item.product_obj.title}}</a>
+                                                                <a href="{{ item.product_obj.get_absolute_url }}">{{item.product_obj.title}}</a>
                                                             </h3>
                                                         </td>
                                                         <td class="product-price">
@@ -56,9 +57,14 @@ shopping cart
                                                             </span>
                                                         </td>
                                                         <td class="product-quantity">
-                                                            <div class="quantity">
-                                                                <input type="number" class="quantity-input" name="qty" id="qty-1" value="{{item.quantity}}" min="1">
-                                                            </div>
+                                                            <form method="POST" action={% url "cart:add_to_cart" item.product_obj.id %}>
+                                                                {% csrf_token %}
+                                                                <div class="quantity">
+                                                                    <input type="number" class="quantity-input" name="quantity" id="qty-{{item.product_obj.id}}" value="{{item.quantity}}" min="1" max="30">
+                                                                </div>
+                                                                {{ item.product_update_quantity_form.inplace }}
+                                                                <button type="submit" class="small btn-success">{% trans "Update" %}</button>
+                                                        </form>
                                                         </td>
                                                         <td class="product-total-price">
                                                             <span class="product-price-wrapper">
@@ -66,6 +72,10 @@ shopping cart
                                                             </span>
                                                         </td>
                                                     </tr>
+                                                     {% empty %}
+                                                        <p>
+                                                            سبد خرید شما خالی است
+                                                        </p>
                                                     {% endfor %}
                                        
                                                 </tbody>
@@ -78,7 +88,7 @@ shopping cart
                                         <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
                                     </div>
                                 </div>
-                            </form>
+                     
                         </div>
                         <div class="col-lg-4">
                             <div class="cart-collaterals">

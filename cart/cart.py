@@ -13,24 +13,28 @@ class Cart:
             cart = self.session['cart'] = {}
         self.cart = cart
 
-    def add(self, product, quantity=1):
+    def add(self, product, quantity=1, replcace_quantity=False):
         """
         Add the specified product to cart if is not exists else add the quantity
         """
         product_id = str(product.id)
         if product_id not in self.cart.keys():
             self.cart[product_id] = {
-                'quantity': quantity
+                'quantity': 0
             }
+        if replcace_quantity:
+            # replace the current quantity with new one
+            self.cart[product_id]['quantity'] = quantity
         else:
+
             self.cart[product_id]['quantity'] += quantity
         self.save()
 
     def save(self):
         """
-        Mark session as modified to save changes
+        Marks that session was changed
         """
-        self.session.modified = True
+        self.session.modified = True 
 
     def delete(self, product):
         """
