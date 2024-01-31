@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .cart import Cart
 from products.models import Product
 from .forms import AddToCartForm
-
+from django.views.decorators.http import require_POST
 
 def cart_detail_view(request):
     cart = Cart(request)
@@ -15,8 +15,10 @@ def cart_detail_view(request):
         'cart': cart,
     }
     return render(request, 'cart/cart_detail.html', context)
+    
+from django.views.decorators.http import require_POST
 
-
+@require_POST
 def add_to_cart_view(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
@@ -26,7 +28,6 @@ def add_to_cart_view(request, product_id):
         cleaned_data = form.cleaned_data
         quantity = cleaned_data['quantity']
         cart.add(product, quantity, cleaned_data['inplace'])
-        # request.session.modified = True  # marks that session was changed
     return redirect('cart:cart_detail')
 
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-27 11:06+0330\n"
+"POT-Creation-Date: 2024-01-31 08:47+0330\n"
 "PO-Revision-Date: 2024-01-27 11:40+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,10 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: models.py:7
-#| msgid "product"
 msgid "product title"
 msgstr "عنوان محصول"
 
-#: models.py:8 templates/products/product_detail.html:73
+#: models.py:8 templates/products/product_detail.html:76
 msgid "description"
 msgstr "توضیحات"
 
@@ -33,7 +32,6 @@ msgid "created date"
 msgstr "تاریخ ایجاد"
 
 #: models.py:10
-#| msgid "modified date"
 msgid "last modified date"
 msgstr "تاریخ آخرین تغییر"
 
@@ -89,30 +87,34 @@ msgstr "امتیاز"
 msgid "Active \\ Inactive"
 msgstr "فعال/غیرفعال"
 
-#: templates/products/product_detail.html:67
+#: templates/products/product_detail.html:70
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: templates/products/product_detail.html:70
+#: templates/products/product_detail.html:73
 msgid "categories"
 msgstr "دسته بندی‌ها"
 
-#: templates/products/product_detail.html:88
+#: templates/products/product_detail.html:91
 msgid "weight"
 msgstr "وزن"
 
-#: templates/products/product_detail.html:92
+#: templates/products/product_detail.html:95
 msgid "size"
 msgstr "سایز"
 
-#: templates/products/product_detail.html:96
+#: templates/products/product_detail.html:99
 msgid "color"
 msgstr "رنگ"
 
-#: templates/products/product_detail.html:149
+#: templates/products/product_detail.html:152
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: templates/products/product_detail.html:173
+#: templates/products/product_detail.html:176
 msgid "submit"
 msgstr "ارسال"
+
+#: views.py:31
+msgid "Your messages has been sent successfully"
+msgstr "پیام شما با موفقیت ارسال شد."

@@ -1,6 +1,6 @@
 from products.models import Product
-
-
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 class Cart:
     def __init__(self, request):
         """
@@ -26,8 +26,8 @@ class Cart:
             # replace the current quantity with new one
             self.cart[product_id]['quantity'] = quantity
         else:
-
             self.cart[product_id]['quantity'] += quantity
+        messages.success(self.request, _("Your cart has been Updated successfully"))
         self.save()
 
     def save(self):
@@ -53,6 +53,7 @@ class Cart:
             cart[str(product.id)]['product_obj'] = product
 
         for item in cart.values():
+            item['total_price'] = item['product_obj'].price * item['quantity']
             yield item
     
     def __len__(self):
@@ -63,6 +64,6 @@ class Cart:
         self.save()
 
     def get_total_price(self):
-        product_ids = self.cart.keys()
-        products = Product.objects.filter(id__in=product_ids)
-        return sum(product.price for product in products)
+        # product_ids = self.cart.keys() 
+        # products = Product.objects.filter(id__in=product_ids)
+        return sum(item['product_obj'].price * item['quantity'] for item in self.cart.values())

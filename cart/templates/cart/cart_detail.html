@@ -27,6 +27,7 @@ shopping cart
                     
                                 <div class="row no-gutters">
                                     <div class="col-12">
+                                        {% if cart %}
                                         <div class="table-content table-responsive">
                                             <table class="table text-center">
                                                 <thead>
@@ -53,7 +54,7 @@ shopping cart
                                                         </td>
                                                         <td class="product-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">۱۴۸,۰۰۰ تومان</span>
+                                                                <span class="money">{{item.product_obj.price}} </span>
                                                             </span>
                                                         </td>
                                                         <td class="product-quantity">
@@ -68,19 +69,21 @@ shopping cart
                                                         </td>
                                                         <td class="product-total-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{item.product_obj.price}} تومان</span>
+                                                                <span class="money">{{item.total_price}}</span>
                                                             </span>
                                                         </td>
                                                     </tr>
-                                                     {% empty %}
-                                                        <p>
-                                                            سبد خرید شما خالی است
-                                                        </p>
+                                            
                                                     {% endfor %}
                                        
                                                 </tbody>
                                             </table>
                                         </div>  
+                                        {% else %}
+                                        <p>
+                                           {% trans "Your Cart is Empty! You can add some products" %}: <a href="{% url "product_list" %}">{% trans "product list" %}</a>
+                                        </p>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <div class="row no-gutters border-top pt--20 mt--20">
@@ -93,7 +96,7 @@ shopping cart
                         <div class="col-lg-4">
                             <div class="cart-collaterals">
                                 <div class="cart-totals">
-                                    <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
+                                    <h5 class="font-size-14 font-bold mb--15">{% trans "Total" %}</h5>
                                     <div class="cart-calculator">
                                         <div class="cart-calculator__item">
                                             <div class="cart-calculator__item--head">
@@ -105,11 +108,11 @@ shopping cart
                                         </div>
                                         <div class="cart-calculator__item order-total">
                                             <div class="cart-calculator__item--head">
-                                                <span>جمع کل</span>
+                                                <span>{% trans "Total Price" %}</span>
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">۳۴۶,۰۰۰ تومان</span>
+                                                    <span class="money">{{cart.get_total_price}} تومان</span>
                                                 </span>
                                             </div>
                                         </div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-30 10:27+0330\n"
+"POT-Creation-Date: 2024-01-31 08:38+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: templates/cart/cart_detail.html:35
+#: cart.py:30
+msgid "Your cart has been Updated successfully"
+msgstr ".سبد خرید شما با موفقیت به روز رسانی شد"
+
+#: templates/cart/cart_detail.html:36
 msgid "Product Image"
 msgstr "تصویر محصول"
 
-#: templates/cart/cart_detail.html:36
+#: templates/cart/cart_detail.html:37
 msgid "Product Title"
 msgstr "عنوان محصول"
 
-#: templates/cart/cart_detail.html:37
+#: templates/cart/cart_detail.html:38
 msgid "Price"
 msgstr "قیمت"
 
-#: templates/cart/cart_detail.html:38
+#: templates/cart/cart_detail.html:39
 msgid "Quantity"
 msgstr "تعداد"
 
-#: templates/cart/cart_detail.html:39
+#: templates/cart/cart_detail.html:40 templates/cart/cart_detail.html:99
 msgid "Total"
 msgstr "مجموع"
 
-#: templates/cart/cart_detail.html:66
+#: templates/cart/cart_detail.html:67
 msgid "Update"
 msgstr "به روز رسانی"
+
+#: templates/cart/cart_detail.html:84
+msgid "Your Cart is Empty! You can add some products"
+msgstr ""
+"سبد خرید شما خالی است! می‌توانید محصول دلخواه را به سبد خرید خود اضافه کنید."
+
+#: templates/cart/cart_detail.html:84
+msgid "product list"
+msgstr "عنوان محصول"
+
+#: templates/cart/cart_detail.html:111
+msgid "Total Price"
+msgstr "قیمت کل"
