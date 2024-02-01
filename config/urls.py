@@ -27,5 +27,5 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
 
     # rosetta (i18n)
-    path('rosseta/', include('rosetta.urls'))
+    path('rosetta/', include('rosetta.urls'))
 ]

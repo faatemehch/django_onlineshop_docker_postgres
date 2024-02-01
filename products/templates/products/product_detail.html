@@ -6,17 +6,8 @@
 {% block title %}{{ product.title }}{% endblock title %}
 {% block content %}
      <!-- Breadcrumb area Start -->
-     <div class="breadcrumb-area bg-color ptb--90" data-bg-color="#f6f6f6">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center flex-sm-row flex-column">
-                        <h1 class="page-title">جزئیات محصول {{product}} </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     {% trans "Product Detail" as header_title %}
+     {% include "breadcrumb_area.html" with header_title=header_title %}
     <!-- Breadcrumb area End -->
     
         <!-- Main Content Wrapper Start -->
@@ -150,6 +141,7 @@
                                                     <div class="col-lg-8 m-auto">
                                                         <span class="reply-title pull-right">{% trans "Write your comment" %}</span>
                                                         <br>
+                                                        {% if request.user.is_authenticated %}
                                                         <form method="POST" class="form text-right" action="{% url "comment_create" product.id %}">
                                                             {% csrf_token %}
                                                             {{form|crispy }}
@@ -176,6 +168,9 @@
                                                                 </div>
                                                             </div>
                                                         </form>
+                                                        {% else %}
+                                                        <p>{% trans "To Write your comment please" %} <a href="{% url "account_login" %}">{% trans "Login" %}</a></p>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>
