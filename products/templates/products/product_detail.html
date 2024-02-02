@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load jalali_tags %}
 {% load static %}
 {% load i18n %}
 {% load crispy_forms_tags%}
@@ -114,7 +115,7 @@
                                                                     <div class="review__meta">
                                                                         <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                                         <span class="review__dash">-</span>
-                                                                        <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                                                        <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y/%B/%d _ %H:%M:%S' }}</span>
                                                                     </div>
                                                                     <div class="product-rating">
                                                                         <div class="m-5 p-3 star-rating star-five">

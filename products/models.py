@@ -7,9 +7,9 @@ from django.utils.translation import gettext_lazy as _
 class Product(models.Model):
     title = models.CharField(max_length=200, verbose_name=_('product title'))
     description = models.TextField(verbose_name=_('description'))
-    datetiem_created = models.DateTimeField(
+    datetime_created = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created date'))
-    datetiem_modified = models.DateTimeField(
+    datetime_modified = models.DateTimeField(
         auto_now=True, verbose_name=_('last modified date'))
     price = models.PositiveIntegerField(default=0, verbose_name=_('price'))
     active = models.BooleanField(default=1, verbose_name=_('Active\Inactive'))
