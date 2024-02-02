@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 {% load jalali_tags %}
 {% load static %}
+{% load humanize %}
 {% load i18n %}
 {% load crispy_forms_tags%}
 {% load comment_tags %}
@@ -29,7 +30,7 @@
                                    {{product.description|truncatewords:20}}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{product.price | translate_numbers_to_persian }}تومان</span>
+                                    <span class="money text-success">{{product.price | intcomma:False | translate_numbers_to_persian }} تومان </span>
                                     <span class="price-separator">-</span>
                                     <span class="money old-price text-danger">۲۱۰,۰۰۰ تومان</span>
                                 </div>
@@ -67,7 +68,7 @@
                                         <span> {% trans "categories" %}</span>
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
-                                        <span>{% trans "description" %} ({{product.comments|only_active_comments|length}})</span>
+                                        <span>{% trans "description" %} ({{product.comments|only_active_comments|length|translate_numbers_to_persian}})</span>
                                     </a>
                                 </div>
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
@@ -104,7 +105,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
                                         <div class="product-reviews">
-                                            <h3 class="review__title">{{product.comments|only_active_comments|length}} نظر برای لباس تابستانی</h3>
+                                            <h3 class="review__title">{{product.comments|only_active_comments|length|translate_numbers_to_persian}} نظر برای لباس تابستانی</h3>
                                             <ul class="review__list">
                                                 {% for comment in  product.comments.all|only_active_comments %}
                                                 <li class="review__item">

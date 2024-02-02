@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load persian_translation_tags %}
+{% load humanize %}
 {% load i18n %}
 {% block title %}
 shopping cart
@@ -48,7 +49,7 @@ shopping cart
                                                         </td>
                                                         <td class="product-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{item.product_obj.price|translate_numbers_to_persian}} </span>
+                                                                <span class="money">{{item.product_obj.price|intcomma:False | translate_numbers_to_persian}}</span>
                                                             </span>
                                                         </td>
                                                         <td class="product-quantity">
@@ -63,7 +64,7 @@ shopping cart
                                                         </td>
                                                         <td class="product-total-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{item.total_price|translate_numbers_to_persian}}</span>
+                                                                <span class="money">{{item.total_price| intcomma:False | translate_numbers_to_persian}}</span>
                                                             </span>
                                                         </td>
                                                     </tr>
@@ -106,7 +107,7 @@ shopping cart
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{cart.get_total_price|translate_numbers_to_persian}} تومان</span>
+                                                    <span class="money">{{cart.get_total_price|intcomma:False | translate_numbers_to_persian}} تومان</span>
                                                 </span>
                                             </div>
                                         </div>
