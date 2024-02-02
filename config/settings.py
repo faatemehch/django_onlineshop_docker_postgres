@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'pages',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
+    'persion_settings.apps.PersionSettingsConfig',
 ]
 SITE_ID = 1
 

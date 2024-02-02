@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load persian_translation_tags %}
 {% load i18n %}
 {% block title %}
 shopping cart
@@ -47,14 +48,14 @@ shopping cart
                                                         </td>
                                                         <td class="product-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{item.product_obj.price}} </span>
+                                                                <span class="money">{{item.product_obj.price|translate_numbers_to_persian}} </span>
                                                             </span>
                                                         </td>
                                                         <td class="product-quantity">
                                                             <form method="POST" action={% url "cart:add_to_cart" item.product_obj.id %}>
                                                                 {% csrf_token %}
                                                                 <div class="quantity">
-                                                                    <input type="number" class="quantity-input" name="quantity" id="qty-{{item.product_obj.id}}" value="{{item.quantity}}" min="1" max="30">
+                                                                    <input type="number" class="quantity-input" name="quantity" id="qty-{{item.product_obj.id}}" value="{{ item.quantity }}" min="1" max="30">
                                                                 </div>
                                                                 {{ item.product_update_quantity_form.inplace }}
                                                                 <button type="submit" class="small btn-success">{% trans "Update" %}</button>
@@ -62,7 +63,7 @@ shopping cart
                                                         </td>
                                                         <td class="product-total-price">
                                                             <span class="product-price-wrapper">
-                                                                <span class="money">{{item.total_price}}</span>
+                                                                <span class="money">{{item.total_price|translate_numbers_to_persian}}</span>
                                                             </span>
                                                         </td>
                                                     </tr>
@@ -105,7 +106,7 @@ shopping cart
                                             </div>
                                             <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{cart.get_total_price}} تومان</span>
+                                                    <span class="money">{{cart.get_total_price|translate_numbers_to_persian}} تومان</span>
                                                 </span>
                                             </div>
                                         </div>
