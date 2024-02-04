@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 10:07+0330\n"
+"POT-Creation-Date: 2024-02-04 10:14+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: models.py:8
 msgid "User"
 msgstr "کاربر"
@@ -53,14 +54,26 @@ msgstr "تاریخ تغییر"
 msgid "Order Note"
 msgstr "یادداشت"
 
-#: models.py:23
+#: models.py:20 models.py:26
 msgid "Order"
 msgstr "سفارش"
 
-#: models.py:24
+#: models.py:21
+msgid "Orders"
+msgstr "سفارش ها"
+
+#: models.py:27
 msgid "Product"
 msgstr "محصول"
 
-#: models.py:25
+#: models.py:28
 msgid "Quantity"
 msgstr "تعداد"
+
+#: models.py:35
+msgid "Order Item"
+msgstr "جزئیات سفارش"
+
+#: models.py:36
+msgid "OrderItems"
+msgstr "جزئیات سفارش‌ها"

@@ -16,6 +16,9 @@ class Product(models.Model):
     active = models.BooleanField(default=1, verbose_name=_('Active\Inactive'))
     image = models.ImageField(verbose_name=_("Product Image"), upload_to='product/product_image', blank=True)
 
+    class Meta:
+        verbose_name = _("Product")
+        verbose_name_plural = _("Products")
 
     def __str__(self):
         return str(self.title)
@@ -53,7 +56,9 @@ class Comment(models.Model):
     # Manager
     objects = models.Manager()
     active_commnets_manager = ActiveCommentsManager()
-
+    class Meta:
+        verbose_name = _("Comment")
+        verbose_name_plural = _("Comments")
     def __str__(self):
         return str(self.product)
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 08:43+0330\n"
+"POT-Creation-Date: 2024-02-04 10:16+0330\n"
 "PO-Revision-Date: 2024-01-27 11:40+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr "عنوان محصول"
 msgid "Short Description"
 msgstr "توضیحات کوتاه محصول"
 
-#: models.py:12 models.py:46
+#: models.py:12 models.py:49
 msgid "created date"
 msgstr "تاریخ ایجاد"
 
@@ -51,49 +51,67 @@ msgstr "فعال/غیرفعال"
 msgid "Product Image"
 msgstr "تصویر محصول"
 
-#: models.py:34
+#: models.py:20
+msgid "Product"
+msgstr "محصول"
+
+#: models.py:21
+msgid "Products"
+msgstr "محصولات"
+
+#: models.py:37
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: models.py:35
+#: models.py:38
 msgid "Bad"
 msgstr "بد"
 
-#: models.py:36
+#: models.py:39
 msgid "Normal"
 msgstr "نرمال"
 
-#: models.py:37
+#: models.py:40
 msgid "Good"
 msgstr "خوب"
 
-#: models.py:38
+#: models.py:41
 msgid "Perfect"
 msgstr "عالی"
 
-#: models.py:41
+#: models.py:44
 msgid "product"
 msgstr "محصول"
 
-#: models.py:43
+#: models.py:46
 msgid "author text"
 msgstr "نویسنده متن"
 
-#: models.py:44
+#: models.py:47
 msgid "message text"
 msgstr "متن پیام"
 
-#: models.py:48
+#: models.py:51
 msgid "modified date"
 msgstr "تاریخ آخرین تغییر"
 
-#: models.py:49
+#: models.py:52
 msgid "Points"
 msgstr "امتیاز"
 
-#: models.py:51
+#: models.py:54
 msgid "Active \\ Inactive"
 msgstr "فعال/غیرفعال"
+
+#: models.py:60
+#, fuzzy
+#| msgid "comments"
+msgid "Comment"
+msgstr "نظر"
+
+#: models.py:61
+msgid "Comments"
+msgstr "نظرات"
 
 #: templates/products/product_detail.html:12
 msgid "Product Detail"

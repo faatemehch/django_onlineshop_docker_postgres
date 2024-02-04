@@ -16,6 +16,9 @@ class Order(models.Model):
     order_note = models.CharField(_("Order Note"), max_length=700, blank=True)
     def __str__(self):
         return f"Order {self.id}"
+    class Meta:
+        verbose_name = _("Order")
+        verbose_name_plural = _("Orders")
     
 
 
@@ -27,5 +30,9 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"OrderItem {self.id} Of {self.order} Order"
+
+    class Meta:
+        verbose_name = _("Order Item")
+        verbose_name_plural = _("OrderItems")
     
 
