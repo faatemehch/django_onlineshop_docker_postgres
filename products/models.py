@@ -6,6 +6,7 @@ from ckeditor.fields import RichTextField
 
 class Product(models.Model):
     title = models.CharField(max_length=200, verbose_name=_('product title'))
+    short_description = models.CharField(_("Short Description"), max_length=300, blank=True)
     description = RichTextField()
     datetime_created = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created date'))

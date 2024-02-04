@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 17:25+0330\n"
+"POT-Creation-Date: 2024-02-04 08:43+0330\n"
 "PO-Revision-Date: 2024-01-27 11:40+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,114 +19,129 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: models.py:7
+#: admin.py:21 admin.py:31
+msgid "DateTime Created"
+msgstr "تاریخ ایجاد"
+
+#: models.py:8
 msgid "product title"
 msgstr "عنوان محصول"
 
-#: models.py:8 templates/products/product_detail.html:67
-msgid "description"
-msgstr "توضیحات"
+#: models.py:9
+msgid "Short Description"
+msgstr "توضیحات کوتاه محصول"
 
-#: models.py:9 models.py:40
+#: models.py:12 models.py:46
 msgid "created date"
 msgstr "تاریخ ایجاد"
 
-#: models.py:10
+#: models.py:14
 msgid "last modified date"
 msgstr "تاریخ آخرین تغییر"
 
-#: models.py:11
+#: models.py:15
 msgid "price"
 msgstr "قیمت"
 
-#: models.py:12
+#: models.py:16
 msgid "Active\\Inactive"
 msgstr "فعال/غیرفعال"
 
-#: models.py:29
+#: models.py:17
+msgid "Product Image"
+msgstr "تصویر محصول"
+
+#: models.py:34
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: models.py:30
+#: models.py:35
 msgid "Bad"
 msgstr "بد"
 
-#: models.py:31
+#: models.py:36
 msgid "Normal"
 msgstr "نرمال"
 
-#: models.py:32
+#: models.py:37
 msgid "Good"
 msgstr "خوب"
 
-#: models.py:33
+#: models.py:38
 msgid "Perfect"
 msgstr "عالی"
 
-#: models.py:36
+#: models.py:41
 msgid "product"
 msgstr "محصول"
 
-#: models.py:38
+#: models.py:43
 msgid "author text"
 msgstr "نویسنده متن"
 
-#: models.py:39
+#: models.py:44
 msgid "message text"
 msgstr "متن پیام"
 
-#: models.py:41
+#: models.py:48
 msgid "modified date"
 msgstr "تاریخ آخرین تغییر"
 
-#: models.py:42
+#: models.py:49
 msgid "Points"
 msgstr "امتیاز"
 
-#: models.py:43
+#: models.py:51
 msgid "Active \\ Inactive"
 msgstr "فعال/غیرفعال"
 
-#: templates/products/product_detail.html:9
+#: templates/products/product_detail.html:12
 msgid "Product Detail"
 msgstr "جزئیات محصول"
 
-#: templates/products/product_detail.html:61
+#: templates/products/product_detail.html:66
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: templates/products/product_detail.html:64
+#: templates/products/product_detail.html:69
 msgid "categories"
 msgstr "دسته بندی‌ها"
 
-#: templates/products/product_detail.html:82
+#: templates/products/product_detail.html:72
+msgid "comments"
+msgstr "نظرات"
+
+#: templates/products/product_detail.html:87
 msgid "weight"
 msgstr "وزن"
 
-#: templates/products/product_detail.html:86
+#: templates/products/product_detail.html:91
 msgid "size"
 msgstr "سایز"
 
-#: templates/products/product_detail.html:90
+#: templates/products/product_detail.html:95
 msgid "color"
 msgstr "رنگ"
 
-#: templates/products/product_detail.html:143
+#: templates/products/product_detail.html:148
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: templates/products/product_detail.html:168
+#: templates/products/product_detail.html:173
 msgid "submit"
 msgstr "ارسال"
 
-#: templates/products/product_detail.html:174
+#: templates/products/product_detail.html:179
 msgid "To Write your comment please"
 msgstr "برای نوشتن نظر خود لطفا"
 
-#: templates/products/product_detail.html:174
+#: templates/products/product_detail.html:179
 msgid "Login"
 msgstr "وارد شوید"
 
 #: views.py:31
 msgid "Your messages has been sent successfully"
 msgstr "پیام شما با موفقیت ارسال شد."
+
+#~ msgid "description"
+#~ msgstr "توضیحات"
