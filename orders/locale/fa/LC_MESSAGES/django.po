@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-04 10:07+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: models.py:8
+msgid "User"
+msgstr "کاربر"
+
+#: models.py:9
+msgid "First Name"
+msgstr "نام"
+
+#: models.py:10
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: models.py:11
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+#: models.py:12
+msgid "Address"
+msgstr "آدرس"
+
+#: models.py:13
+msgid "Is Paide"
+msgstr "پرداخت شده"
+
+#: models.py:14
+msgid "Created At"
+msgstr "تاریخ ایجاد"
+
+#: models.py:15
+msgid "Modified At"
+msgstr "تاریخ تغییر"
+
+#: models.py:16
+msgid "Order Note"
+msgstr "یادداشت"
+
+#: models.py:23
+msgid "Order"
+msgstr "سفارش"
+
+#: models.py:24
+msgid "Product"
+msgstr "محصول"
+
+#: models.py:25
+msgid "Quantity"
+msgstr "تعداد"
