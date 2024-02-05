@@ -3,20 +3,22 @@ from .cart import Cart
 from products.models import Product
 from .forms import AddToCartForm
 from django.views.decorators.http import require_POST
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
+
 
 def cart_detail_view(request):
     cart = Cart(request)
     for item in cart:
         item["product_update_quantity_form"] = AddToCartForm(initial={
-            'quantity' : item['quantity'],
-            'inplace' : True
+            'quantity': item['quantity'],
+            'inplace': True
         })
     context = {
         'cart': cart,
     }
     return render(request, 'cart/cart_detail.html', context)
-    
-from django.views.decorators.http import require_POST
+
 
 @require_POST
 def add_to_cart_view(request, product_id):
@@ -36,3 +38,14 @@ def remove_from_cart(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     cart.delete(product)
     return redirect('cart:cart_detail')
+
+
+@require_POST
+def clear_cart(request):
+    cart = Cart(request)
+    if len(cart) != 0:
+        cart.clear()
+        messages.success(request, _("Your cart has been deleted succesfully"))
+    else:
+        messages.warning(request, _("Your cart is already empty."))
+    return redirect("product_list")   

@@ -38,8 +38,8 @@
         <span class="ammount">{{cart.get_total_price| intcomma:False | translate_numbers_to_persian}}</span>
     </div>
     <div class="mini-cart__buttons">
-        <a href="cart.html" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "Go To Cart" %}</a>
-        <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans "Checkout" %}</a>
+        <a href="{% url "cart:cart_detail" %}" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "Go To Cart" %}</a>
+        <a href="{% url "orders:order_create" %}" class="btn btn-fullwidth btn-bg-sand">{% trans "Checkout" %}</a>
     </div>
 </div>
 </div>

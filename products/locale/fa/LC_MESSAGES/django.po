@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 10:16+0330\n"
+"POT-Creation-Date: 2024-02-05 16:26+0330\n"
 "PO-Revision-Date: 2024-01-27 11:40+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,6 +156,19 @@ msgstr "برای نوشتن نظر خود لطفا"
 #: templates/products/product_detail.html:179
 msgid "Login"
 msgstr "وارد شوید"
+
+#: templates/products/product_list.html:49
+msgid "Discount"
+msgstr ""
+
+#: templates/products/product_list.html:56
+#: templates/products/product_list.html:59
+msgid "$"
+msgstr "تومان"
+
+#: templates/products/product_list.html:62
+msgid "Show Product Detail"
+msgstr "مشاهده جزئیات محصول"
 
 #: views.py:31
 msgid "Your messages has been sent successfully"

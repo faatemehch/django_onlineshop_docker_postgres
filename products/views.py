@@ -14,6 +14,7 @@ class ProductListView(generic.ListView):
     model = Product
     queryset = Product.objects.filter(active=True)
     context_object_name = 'products'
+    paginate_by = 20
 
 class ProductDetailView(generic.DetailView):
     model = Product
