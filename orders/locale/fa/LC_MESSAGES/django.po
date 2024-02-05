@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-04 10:14+0330\n"
+"POT-Creation-Date: 2024-02-05 16:03+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: forms.py:14
+msgid "If You have any note writ here."
+msgstr "اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی بگذارید"
+
 #: models.py:8
 msgid "User"
 msgstr "کاربر"
 
-#: models.py:9
+#: models.py:9 templates/orders/order_create.html:33
 msgid "First Name"
 msgstr "نام"
 
-#: models.py:10
+#: models.py:10 templates/orders/order_create.html:37
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: models.py:11
+#: models.py:11 templates/orders/order_create.html:49
 msgid "Phone Number"
 msgstr "شماره تلفن"
 
-#: models.py:12
+#: models.py:12 templates/orders/order_create.html:43
 msgid "Address"
 msgstr "آدرس"
 
@@ -54,7 +58,7 @@ msgstr "تاریخ تغییر"
 msgid "Order Note"
 msgstr "یادداشت"
 
-#: models.py:20 models.py:26
+#: models.py:20 models.py:26 templates/orders/order_create.html:9
 msgid "Order"
 msgstr "سفارش"
 
@@ -62,7 +66,7 @@ msgstr "سفارش"
 msgid "Orders"
 msgstr "سفارش ها"
 
-#: models.py:27
+#: models.py:27 templates/orders/order_create.html:79
 msgid "Product"
 msgstr "محصول"
 
@@ -77,3 +81,34 @@ msgstr "جزئیات سفارش"
 #: models.py:36
 msgid "OrderItems"
 msgstr "جزئیات سفارش‌ها"
+
+#: templates/orders/order_create.html:21
+msgid "Order Items"
+msgstr "جزئیات سفارش"
+
+#: templates/orders/order_create.html:62
+msgid "Your Note"
+msgstr "یادداشت شما"
+
+#: templates/orders/order_create.html:66
+msgid "Update Order"
+msgstr ""
+
+#: templates/orders/order_create.html:80
+msgid "Total Price"
+msgstr "قیمت نهایی"
+
+#: templates/orders/order_create.html:89 templates/orders/order_create.html:96
+msgid "$"
+msgstr "تومان"
+
+#: views.py:13
+msgid "Your Cart is empty."
+msgstr "سبد خرید شما خالی است. لطفا ابتدا محصولی به آن اضافه کنید."
+
+#: views.py:29
+msgid "Your order has been submitted successfully."
+msgstr "سفارش شما با موفقیت ثبت شد."
+
+#~ msgid "Email"
+#~ msgstr "ایمیل"
